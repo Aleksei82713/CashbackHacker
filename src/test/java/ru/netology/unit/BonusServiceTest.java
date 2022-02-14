@@ -1,18 +1,18 @@
 package ru.netology.unit;
 
-import org.testng.annotations.Test;
+import org.junit.Test;
 
-import static org.testng.Assert.assertEquals;
+import static org.junit.Assert.*;
 
-class BonusServiceTest {
+public class BonusServiceTest {
     @Test
-    void shouldCalculateBonus() {
+    public void shouldCalculateBonus() {
         BonusService service = new BonusService();
         int amount = 2000;
 
         int actual = service.calculateBonus(amount);
         int expected = 10;
 
-        assertEquals(expected, actual, "Wrong bonus calculated");
+        assertEquals(expected, actual);
     }
 }
